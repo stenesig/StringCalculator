@@ -17,6 +17,9 @@ function add(string){
         if(parsed < 0){
             neg.push(parsed);
         }
+        if(parsed > 1000){
+            
+        }
         else{
             sum += parsed;
         }

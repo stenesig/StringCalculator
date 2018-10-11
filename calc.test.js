@@ -21,4 +21,6 @@ test('should throw negative numbers', () => {
     expect(() => add('-2, 3, 5, -8, 7\n 9')).toThrow();
 });
 
-
+test('should ignore numbers over 1000', () => {
+    expect(add('1001, 2')).toBe(2);
+});
