@@ -11,6 +11,7 @@ function add(string){
         sum += parseInt(list[i]);
     }
     return sum;
+    
 }
 
 module.exports = add;
