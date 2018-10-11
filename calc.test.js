@@ -8,6 +8,11 @@ test('should return single provided element', () => {
   expect(add('1')).toBe(1);
 });
 
-test('should return expected sum', () => {
+test('should return expected sum seperated with comma', () => {
     expect(add('1, 2')).toBe(3);
+});
+
+test('should return expected sum seperated with new line', () =>{
+    expect(add('1, 2 \n 3')).toBe(6);
+    expect(add('1\n 2, 3\n 4')).toBe(10);
 });
