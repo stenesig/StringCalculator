@@ -24,3 +24,7 @@ test('should throw negative numbers', () => {
 test('should ignore numbers over 1000', () => {
     expect(add('1001, 2')).toBe(2);
 });
+
+test('should accept any delimiter', () => {
+    expect(add('//;\n1,2;3')).toBe(6);
+  });

@@ -8,8 +8,11 @@ function add(string){
         return 0;
     }
 
+    if (string.match(/^\/\/(\D+)\n/)) {
+        sep.push(string.match(/^\/\/(\D+)\n/)[1]);
+      }
 
-    const list = string.split(new RegExp(`[${sep.join('')}]`));
+    const list = string.split(new RegExp(`[${sep.join('')}]`)).filter(item => !isNaN(parseInt(item)));
 
     let sum = 0;
     for(let i = 0; i < list.length; i++){
