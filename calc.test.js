@@ -16,3 +16,9 @@ test('should return expected sum seperated with new line', () =>{
     expect(add('1, 2 \n 3')).toBe(6);
     expect(add('1\n 2, 3\n 4')).toBe(10);
 });
+
+test('should throw negative numbers', () => {
+    expect(() => add('-2, 3, 5, -8, 7\n 9')).toThrow();
+});
+
+
